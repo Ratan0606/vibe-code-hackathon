@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ABTalks — 60-Day Coding Challenge Platform
 
 A mobile-first, production-quality web application built for Indian college students participating in the ABTalks 60-Day Coding Challenge. Designed with an encouraging editorial aesthetic, distinct visual identity, and thoughtful features like **Tonight's Finish Line** and **Done Looks Like**.
@@ -63,3 +64,4 @@ A mobile-first, production-quality web application built for Indian college stud
 - **Success State**: Emerald Green (`#10B981`)
 - **Motivation State**: Warm Amber (`#F59E0B`)
 - **Typography**: Plus Jakarta Sans
+
