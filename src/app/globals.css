@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FAF8F5;
+  --foreground: #141517;
+  --font-plus-jakarta: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --accent-500: #6d28d9; /* indigo-ish */
+  --accent-400: #8b5cf6;
+  --muted-100: #f3f4f6;
+  --glass: rgba(255,255,255,0.6);
+  --card-gradient: linear-gradient(135deg,#fff 0%, #f8fafc 40%, #f3f4ff 100%);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-plus-jakarta);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E2E8F0;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CBD5E1;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Touch Active Scaling Utility */
+.active-scale {
+  transition: transform 0.1s ease;
+}
+
+.active-scale:active {
+  transform: scale(0.97);
+}
+
+/* Subtle hero gradient background utility */
+.hero-bg {
+  background-image: radial-gradient(1200px 400px at 10% 10%, rgba(139,92,246,0.08), transparent 10%), radial-gradient(800px 300px at 90% 90%, rgba(99,102,241,0.06), transparent 15%);
+}
+
+/* Soft glass card */
+.glass-card {
+  background: var(--card-gradient);
+  backdrop-filter: blur(6px) saturate(120%);
+  border: 1px solid rgba(15,23,42,0.04);
+}
+
+/* Accent button */
+.btn-accent {
+  background: linear-gradient(90deg,var(--accent-500),var(--accent-400));
+  color: white;
+  box-shadow: 0 6px 18px rgba(99,102,241,0.12), inset 0 -2px 6px rgba(255,255,255,0.06);
+}
+
+/* Gentle float animation for small accents */
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+.float-slow { animation: floatY 4s ease-in-out infinite; }
+
+/* Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
